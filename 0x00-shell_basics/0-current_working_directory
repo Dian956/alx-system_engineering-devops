@@ -1,3 +1,2 @@
 #!/bin/bash
-# this is the command to print directory path
 echo ${pwd}

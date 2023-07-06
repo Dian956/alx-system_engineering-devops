@@ -1,2 +1,2 @@
 #!/bin/bash
-chmo -R +755 _ 
+chmod ls -lah 

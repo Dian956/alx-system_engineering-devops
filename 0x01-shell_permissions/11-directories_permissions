@@ -1,2 +1,2 @@
 #!/bin/bash
-chmo -R +755 .
+chmo -R +755 _ 

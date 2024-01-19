@@ -1,0 +1,6 @@
+root@d391259bf577:/# cat killmenow
+#!/bin/bash
+while [[ true ]]
+do
+    sleep 2
+done

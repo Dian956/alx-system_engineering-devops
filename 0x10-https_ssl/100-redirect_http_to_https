@@ -65,3 +65,4 @@ backend www-backend
         server 465493-web-01 18.204.10.176
 	server 465493-web-02 34.227.101.135
 	server 465493-lb-01 54.236.43.155
+sudo service haproxy restart

@@ -1,0 +1,128 @@
+[34m
+* Datadog Agent 7 install script v1.27.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:4 http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu focal InRelease
+Hit:5 https://deb.nodesource.com/node_14.x focal InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [3,491 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [32.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,906 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,485 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,431 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,189 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [3,341 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [29.7 kB]
+Fetched 17.1 MB in 18s (936 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gnupg is already the newest version (2.2.19-3ubuntu2.2).
+gnupg set to manually installed.
+The following package was automatically installed and is no longer required:
+  libc-ares2
+Use 'apt autoremove' to remove it.
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  curl libcurl4
+2 upgraded, 1 newly installed, 0 to remove and 100 not upgraded.
+Need to get 398 kB of archives.
+After this operation, 162 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.10 [1,704 B]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.21 [161 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.21 [235 kB]
+Fetched 398 kB in 1s (586 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 81580 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.10_all.deb ...
+Unpacking apt-transport-https (2.0.10) ...
+Preparing to unpack .../curl_7.68.0-1ubuntu2.21_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.21) over (7.68.0-1ubuntu2.20) ...
+Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.21_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.21) over (7.68.0-1ubuntu2.20) ...
+Setting up apt-transport-https (2.0.10) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.21) ...
+Setting up curl (7.68.0-1ubuntu2.21) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.12) ...
+[34m
+* Installing APT package sources for Datadog
+[0m
+gpg: directory '/root/.gnupg' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key 32637D44F14F620E: public key "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key E6266D4AC0962C7D: public key "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: key D3A80E30382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+Ign:1 https://apt.datadoghq.com stable InRelease
+Get:2 https://apt.datadoghq.com stable Release [17.8 kB]
+Get:3 https://apt.datadoghq.com stable Release.gpg [801 B]
+Get:4 https://apt.datadoghq.com stable/7 amd64 Packages [61.0 kB]
+Get:5 https://apt.datadoghq.com stable/7 all Packages [1,073 B]
+Fetched 80.7 kB in 1s (89.7 kB/s)
+Reading package lists...
+  [33mInstalling package(s): datadog-agent datadog-signing-keys
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libc-ares2
+Use 'apt autoremove' to remove it.
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 100 not upgraded.
+Need to get 262 MB of archives.
+After this operation, 1,202 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.51.1-1 [262 MB]
+Get:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1 [22.3 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 262 MB in 24s (11.0 MB/s)
+Selecting previously unselected package datadog-agent.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 81584 files and directories currently installed.)
+Preparing to unpack .../datadog-agent_1%3a7.51.1-1_amd64.deb ...
+Unpacking datadog-agent (1:7.51.1-1) ...
+dpkg: error processing archive /var/cache/apt/archives/datadog-agent_1%3a7.51.1-1_amd64.deb (--unpack):
+ cannot copy extracted data for './opt/datadog-agent/embedded/lib/python3.11/site-packages/securesystemslib/_vendor/ed25519/test_data/ed25519' to '/opt/datadog-agent/embedded/lib/python3.11/site-packages/securesystemslib/_vendor/ed25519/test_data/ed25519.dpkg-new': failed to write (No space left on device)
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+Selecting previously unselected package datadog-signing-keys.
+Preparing to unpack .../datadog-signing-keys_1%3a1.3.1-1_all.deb ...
+Unpacking datadog-signing-keys (1:1.3.1-1) ...
+Errors were encountered while processing:
+ /var/cache/apt/archives/datadog-agent_1%3a7.51.1-1_amd64.deb
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+[31mERROR
+Failed to install one or more packages, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Datadog Agent.
+
+    
+
+Troubleshooting and basic usage information for the Datadog Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+[0m
+Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) 
+If you are still having problems, please send an email to support@datadoghq.com
+with the contents of ddagent-install.log and any information you think would be
+useful and we will do our very best to help you solve your problem.
